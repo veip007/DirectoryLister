@@ -11,7 +11,9 @@ if($md_path[1] != ""){
 		$md_file = ".".$md_path[1]."README.html";
 	}
 }
-$md_text = file_get_contents($md_file);
+if(file_exists($md_file)){
+	$md_text = file_get_contents($md_file);
+}
 ?>
 <html>
     <head>
