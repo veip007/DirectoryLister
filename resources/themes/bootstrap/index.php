@@ -13,6 +13,8 @@ if($md_path[1] != ""){
 }
 if(file_exists($md_file)){
 	$md_text = file_get_contents($md_file);
+}else{
+	$md_text = "";
 }
 ?>
 <html>
