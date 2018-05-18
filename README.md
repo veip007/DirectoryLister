@@ -11,7 +11,7 @@
 
 ### 演示示例：
 
-逗比云 https://softs.fun
+逗比云 https://softs.loan
 
 ### 下载安装：
 
@@ -19,7 +19,7 @@
 
 Github打包：https://github.com/ToyoDAdoubi/DirectoryLister/archive/master.zip
 
-逗比云打包：https://softs.fun/Website/Directory%20Lister%E9%AD%94%E6%94%B9%E7%89%88%28by-Toyo%29%20v2.6.1.zip
+逗比云打包：https://softs.loan/Website/Directory%20Lister%E9%AD%94%E6%94%B9%E7%89%88%28by-Toyo%29%20v2.6.1.zip
 
 #### 文件结构
 假设你的虚拟主机是 `/home/wwwroot/xxx.xx`
