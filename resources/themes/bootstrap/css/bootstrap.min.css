@@ -5580,6 +5580,7 @@ td.visible-print,th.visible-print {
 .readme-background {
 	background-image: repeating-linear-gradient(-45deg,#4882CE,#4882CE 20px,#FFF 20px,#FFF 35px,#EB1B2E 35px,#EB1B2E 55px,#FFF 55px,#FFF 70px);
 	transition: background-position .2s;
+	margin-top: 20px
 }
 .readme-background:hover {
 	background-position:-66px 0;
