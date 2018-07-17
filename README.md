@@ -79,6 +79,11 @@ $md_path = explode("com", $md_path_all);
 
 ` \resources\themes\bootstrap\index.php `
 
+修改网站顶部公告栏内容，去这个文件里搜索` 顶部公告栏 `或者找到第 ` 72 `行。
+
+` \resources\themes\bootstrap\index.php `
+
+
 网站头部公共文件：
 
 ` \resources\themes\bootstrap\default_header.php `
