@@ -20,15 +20,15 @@ if(file_exists($md_file)){
 <html>
     <head>
         <title>DOUBI Soft <?php echo $md_path_all; ?></title>
-        <link rel="shortcut icon" href="/resources/themes/bootstrap/img/folder.png">
-        <link rel="stylesheet" href="/resources/themes/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/resources/themes/bootstrap/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="/resources/themes/bootstrap/css/style.css">
-		<link href="/resources/themes/bootstrap/css/prism.css" rel="stylesheet" />
-        <script src="/resources/themes/bootstrap/js/jquery.min.js"></script>
-		<script src="/resources/themes/bootstrap/js/prism.js"></script>
-		<script src="/resources/themes/bootstrap/js/bootstrap.min.js"></script>
-        <!-- script type="text/javascript" src="/resources/themes/bootstrap/js/directorylister.js"></script -->
+        <link rel="shortcut icon" href="resources/themes/bootstrap/img/folder.png">
+        <link rel="stylesheet" href="resources/themes/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/themes/bootstrap/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="resources/themes/bootstrap/css/style.css">
+	<link href="resources/themes/bootstrap/css/prism.css" rel="stylesheet" />
+        <script src="resources/themes/bootstrap/js/jquery.min.js"></script>
+	<script src="resources/themes/bootstrap/js/prism.js"></script>
+	<script src="resources/themes/bootstrap/js/bootstrap.min.js"></script>
+        <!-- script type="text/javascript" src="resources/themes/bootstrap/js/directorylister.js"></script -->
         <!-- link rel="stylesheet" type="text/css"  href="//fonts.googleapis.com/css?family=Cutive+Mono" -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
