@@ -67,11 +67,11 @@ if(file_exists($md_file)){
             </div>
         </div>
 		<div class="container">
-        <div class="announcement">
-		<!-- 顶部公告栏 -->
-		<i class="fa fa-volume-down" style="display: inline-block;font-size: 15px;margin: 0;line-height: 1;color: #444;"></i><p style="display: inline-block;font-size: 15px;margin: 0;line-height: 1;text-indent: 5px;" >顶部公告栏</p>
-		<!-- 顶部公告栏 -->
-		</div>
+			<div class="announcement toptip">
+				<!-- 顶部公告栏 -->
+				<i class="fa fa-volume-down"></i><p>顶部公告栏</p>
+				<!-- 顶部公告栏 -->
+			</div>
 		</div>
 		<div id="page-content" class="container">
             <?php file_exists('header.php') ? include('header.php') : include($lister->getThemePath(true) . "/default_header.php"); ?>
