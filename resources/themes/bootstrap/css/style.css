@@ -142,3 +142,14 @@ body.breadcrumb-fixed {
     }
 
 }
+
+.toptip p {
+    text-indent: 5px;
+}
+.toptip i,p {
+	display: inline-block;
+    font-size: 15px;
+    margin: 0;
+    line-height: 1;
+    color: #444;
+}
