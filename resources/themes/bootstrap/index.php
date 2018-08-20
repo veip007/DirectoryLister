@@ -24,12 +24,8 @@ if(file_exists($md_file)){
         <link rel="stylesheet" href="resources/themes/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="resources/themes/bootstrap/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="resources/themes/bootstrap/css/style.css">
-	<link href="resources/themes/bootstrap/css/prism.css" rel="stylesheet" />
         <script src="resources/themes/bootstrap/js/jquery.min.js"></script>
-	<script src="resources/themes/bootstrap/js/prism.js"></script>
 	<script src="resources/themes/bootstrap/js/bootstrap.min.js"></script>
-        <!-- script type="text/javascript" src="resources/themes/bootstrap/js/directorylister.js"></script -->
-        <!-- link rel="stylesheet" type="text/css"  href="//fonts.googleapis.com/css?family=Cutive+Mono" -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <?php file_exists('analytics.inc') ? include('analytics.inc') : false; ?>
@@ -51,7 +47,7 @@ if(file_exists($md_file)){
 </script>
     </head>
     <body>
-        <div id="page-navbar" class="navbar navbar-default navbar-fixed-top">
+        <div id="page-navbar" class="path-top navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <?php $breadcrumbs = $lister->listBreadcrumbs(); ?>
                 <p class="navbar-text">
@@ -66,14 +62,15 @@ if(file_exists($md_file)){
                 </p>
             </div>
         </div>
+        <div class="path-announcement navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- 顶部公告栏 -->
+		    <p><i class="fa fa-volume-down"></i>顶部公告栏</p>
+            	<!-- 顶部公告栏 -->
+            </div>
+        </div>
 		<div class="container">
-			<div class="announcement toptip">
-				<!-- 顶部公告栏 -->
-				<i class="fa fa-volume-down"></i><p>顶部公告栏</p>
-				<!-- 顶部公告栏 -->
-			</div>
-		</div>
-		<div id="page-content" class="container">
+		<div class="page-content container">
             <?php file_exists('header.php') ? include('header.php') : include($lister->getThemePath(true) . "/default_header.php"); ?>
             <?php if($lister->getSystemMessages()): ?>
                 <?php foreach ($lister->getSystemMessages() as $message): ?>
@@ -122,38 +119,15 @@ if(file_exists($md_file)){
                 <?php endforeach; ?>
             </ul>
         </div>
-		<!-- 说明 -->
+		<!-- READMNE 说明 -->
 		<?php
 		if($md_text != ""){
 			echo $md_text;
 		}
 		?>
-		<!-- 说明 -->
-        <?php file_exists('footer.php') ? include('footer.php') : include($lister->getThemePath(true) . "/default_footer.php"); ?>
-        <!-- div id="file-info-modal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">{{modal_header}}</h4>
-                    </div>
-                    <div class="modal-body">
-                        <table id="file-info" class="table table-bordered">
-                            <tbody>
-                                <tr>
-                                    <td class="table-title">MD5</td>
-                                    <td class="md5-hash">{{md5_sum}}</td>
-                                </tr>
-                                <tr>
-                                    <td class="table-title">SHA1</td>
-                                    <td class="sha1-hash">{{sha1_sum}}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                </div>
-            </div>
-        </div -->
-    </body>
-</html>
+		<!-- READMNE 说明 -->
+        </div>
+      <hr style="margin-bottom: 0;margin-top: 40px;" />
+      <?php file_exists('footer.php') ? include('footer.php') : include($lister->getThemePath(true) . "/default_footer.php"); ?>
+      </body>
+  </html>
