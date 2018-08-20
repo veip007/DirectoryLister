@@ -33,24 +33,30 @@ Github打包：https://github.com/ToyoDAdoubi/DirectoryLister/archive/master.zip
 #### 文件结构
 假设你的虚拟主机是 `/home/wwwroot/xxx.xx`
 ``` bash
-/home/wwwroot/xxx.xx
-├─ resources
-│   ├ themes
-│   │ └ bootstrap
-│   │    └ .....
+/home/wwwroot/xxx.xx/
+├─ resources/
+│   ├ themes/
+│   │ └ bootstrap/
+│   │    ├ css/
+│   │    ├ fonts/
+│   │    ├ img/
+│   │    ├ js/
+│   │    ├ default_footer.php # 底部公共文件 #
+│   │    ├ default_header.php # 顶部公共文件（可以放网站流量统计代码） #
+│   │    └ index.php # 网页主文件，其中可以修改顶部公告栏内容 #
 │   │
 │   ├ DirectoryLister.php
 │   ├ config.php
 │   └ fileTypes.php
 │
-├ README.html # 文件夹内的 说明简介文件 #
+├ README.html # 该文件夹页面内的 说明简介文件 #
 ├ index.php
 │
-├─ 测试文件夹
-│   ├ 测试文件.txt
-│   └ README.html # 文件夹内的 说明简介文件 #
+├─ 其他文件夹/
+│   ├ 其他文件.txt
+│   └ README.html # 该文件夹页面内的 说明简介文件 #
 │
-└ 测试文件.txt
+└ 其他文件.txt
 ```
 ### 注意事项：
 
