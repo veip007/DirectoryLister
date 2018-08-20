@@ -68,7 +68,7 @@ sed -i 's/,scandir//g' /usr/local/php/etc/php.ini
 
 我也不知道该给这个功能起什么名字，好捉急偶。
 
-反正就是每个文件夹下面放一个` README.html `文件，这个文件里写着 简介说明内容即可。
+可以在每个文件夹下面放一个` README.html `文件，这个文件里写着 简介说明内容即可，格式参考自带的示例文件。
 
 为了避免中文乱码，把` README.html `文件用 UTF-8无BOM编码 保存！
 
