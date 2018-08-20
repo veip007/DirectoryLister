@@ -11,9 +11,10 @@
 
 ### 更新记录
 
- - 2018/08/20，更新了网站式样 - 素色简洁风（参见下图）。
- - 2018/07/18，修复了当程序位置网站子目录下时，CSS JS 路径错误的问题。
- - 2018/03/26，修复了当前文件夹下无 README.html 文件时，PHP会提示警告的问题。
+ - 2018/08/20，更新 不需要再手动配置域名后缀了，新版本会自动检测。
+ - 2018/08/20，更新 网站式样 - 素色简洁风（参见下图）。
+ - 2018/07/18，修复 当程序位置网站子目录下时，CSS JS 路径错误的问题。
+ - 2018/03/26，修复 当前文件夹下无 README.html 文件时，PHP会提示警告的问题。
  
 ![新旧式样手机效果对比](https://github.com/ToyoDAdoubi/DirectoryLister/raw/master/Compared.png)
 
@@ -66,12 +67,6 @@ sed -i 's/,scandir//g' /usr/local/php/etc/php.ini
 #### 简介功能说明
 
 我也不知道该给这个功能起什么名字，好捉急偶。
-
-使用这个功能，需要打开` resources\themes\bootstrap\index.php `文件，找到第五行的：
-``` bash
-$md_path = explode("com", $md_path_all);
-```
-把` com `改成你的域名后缀(比如` xxx.cn `就是改成` cn `)，当初只是自用，现在一公开开源，我给忘了。
 
 反正就是每个文件夹下面放一个` README.html `文件，这个文件里写着 简介说明内容即可。
 
