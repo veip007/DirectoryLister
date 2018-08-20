@@ -74,8 +74,8 @@ if(file_exists($md_file)){
             	<!-- 顶部公告栏 -->
             </div>
         </div>
-		<div class="container">
-		<div class="page-content container">
+		<div class="container"  id="container_top">
+		<div class="page-content container"  id="container_page">
             <?php file_exists('header.php') ? include('header.php') : include($lister->getThemePath(true) . "/default_header.php"); ?>
             <?php if($lister->getSystemMessages()): ?>
                 <?php foreach ($lister->getSystemMessages() as $message): ?>
@@ -110,9 +110,6 @@ if(file_exists($md_file)){
                             </div>
                         </a>
                         <?php if (is_file($fileInfo['file_path'])): ?>
-                            <!-- a href="javascript:void(0)" class="file-info-button">
-                                <i class="fa fa-info-circle"></i>
-                            </a -->
                         <?php else: ?>
                             <?php if ($lister->containsIndex($fileInfo['file_path'])): ?>
                                 <a href="<?php echo $fileInfo['file_path']; ?>" class="web-link-button" <?php if($lister->externalLinksNewWindow()): ?>target="_blank"<?php endif; ?>>
@@ -134,5 +131,16 @@ if(file_exists($md_file)){
         </div>
       <hr style="margin-bottom: 0;margin-top: 40px;" />
       <?php file_exists('footer.php') ? include('footer.php') : include($lister->getThemePath(true) . "/default_footer.php"); ?>
-      </body>
-  </html>
+<script type="text/javascript"> 
+$(document).ready(function(){
+if (document.body.scrollHeight > window.innerHeight)
+  {
+	container_top.style.marginBottom = '0';
+	container_page.style.marginBottom = '0';
+	container_readme.style.marginBottom = '0';
+	container_readme.style.marginTop = '20px';
+  }
+}); 
+</script> 
+    </body>
+</html>
