@@ -186,7 +186,7 @@ footer.container {
 .path-announcement i {
 	margin-right: 10px;
 }
-.path-announcement i,p {
+.path-announcement i,.path-announcement p {
     display: inline;
 }
 .page-content {
@@ -205,9 +205,6 @@ footer.container {
 	background-color: #fefefe;
     padding: 20px;
     border: 1px solid #ececec;
-}
-.readme p{
-	line-height: 2;
 }
 .readme hr {
 	border-top: 1px solid #dedede;
