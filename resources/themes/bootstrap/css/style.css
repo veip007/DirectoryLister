@@ -159,6 +159,11 @@ footer.container {
 	padding-top: 5px;
     padding-bottom: 1px;
 }
+.path-announcement2 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
 .path-announcement {
 	margin-top: 58px;
     background-color: #fafbfc;
