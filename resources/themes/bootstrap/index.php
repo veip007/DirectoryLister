@@ -63,7 +63,7 @@ if(file_exists($md_file)){
             </div>
         </div>
         <div class="path-announcement navbar navbar-default navbar-fixed-top">
-            <div class="container">
+            <div class="path-announcement2 container">
                 <!-- 顶部公告栏 -->
 		    <p><i class="fa fa-volume-down"></i>顶部公告栏</p>
             	<!-- 顶部公告栏 -->
