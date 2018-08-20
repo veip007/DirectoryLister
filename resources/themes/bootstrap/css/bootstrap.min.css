@@ -3269,8 +3269,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 	padding:10px 15px
 }
 .nav>li>a:focus,.nav>li>a:hover {
-	text-decoration:none;
-	background-color:#fff
+	text-decoration:none
 }
 .nav>li.disabled>a {
 	color:#777
@@ -3720,11 +3719,11 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 }
 }.navbar-default {
 	background-color: #4a4a4a;
-	border-color: #ffffff;
+	/*border-color: #ffffff;
 	border-bottom: 6px solid #159e83 !important;
 	-webkit-box-shadow: 0 -5px 0 rgba(0,0,0,.1);
 	-moz-box-shadow: 0 -4px 0 rgba(0,0,0,.1);
-	box-shadow: 0 6px 0 rgba(0,0,0,.1);
+	box-shadow: 0 6px 0 rgba(0,0,0,.1);*/
 }
 .navbar-default .navbar-brand {
 	color:#777
@@ -3734,7 +3733,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 	background-color:transparent
 }
 .navbar-default .navbar-text {
-	color:#eee
+	color:#fff
 }
 .navbar-default .navbar-text a {
 	color:#fff;
@@ -5575,161 +5574,4 @@ td.visible-print,th.visible-print {
 	.hidden-print {
 	display:none!important
 }
-}
-
-.readme-background {
-	background-image: repeating-linear-gradient(-45deg,#4882CE,#4882CE 20px,#FFF 20px,#FFF 35px,#EB1B2E 35px,#EB1B2E 55px,#FFF 55px,#FFF 70px);
-	transition: background-position .2s;
-	margin-top: 20px
-}
-.readme-background:hover {
-	background-position:-66px 0;
-}
-.readme {
-	margin: 10px -15px 7px;
-	background-color: #fbfbfb;
-	padding: 20px;
-}
-.readme p {
-	line-height: 2;
-}
-.readme hr {
-	border-top: 1px solid #dedede;
-	margin-top: 10px;
-}
-.readme h1 {
-	font-size: 32px;
-	padding-bottom: 20px;
-	border-bottom: solid 1px #dadada;
-}
-.readme h2 {
-	font-size: 26px;
-	padding-bottom: 10px;
-	border-bottom: solid 1px #dadada;
-}
-.readme h3 {
-	font-size: 22px;
-	margin-top: 20px;
-	padding-bottom: 5px;
-	border-bottom: solid 1px #dadada;
-}
-.readme h4 {
-	font-size: 16px;
-	font-weight: bold;
-	padding-bottom: 15px;
-	text-indent: 0;
-}
-.readme ul {
-	font-size:15px;
-}
-.readme blockquote {
-	border-left: 5px solid #ccc;
-	background-color: #f1f1f1;
-	color: #222;
-	font-size: 15px;
-	text-indent: 33px;
-	transition: 0.3s;
-}
-.readme blockquote:hover {
-	border-left: 5px solid #159e83;
-	background-color: #eee;
-	transition: 0.3s;
-}
-.readme blockquote::before{
-	position: absolute;
-	font-family: FontAwesome;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 0;
-	-webkit-font-smoothing: antialiased;
-	color: #666;
-	text-indent: 0;
-	margin-top: 10px;
-	margin-left: -39px;
-	content: "\f10d";
-	transition: 0.3s;
-}
-.readme blockquote:hover::before{
-	color: #222;
-	transition: 0.3s;
-}
-.readme ul li {
-	list-style: none;
-}
-.readme ul li::before{
-	position: absolute;
-	font-family: FontAwesome;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 0;
-	-webkit-font-smoothing: antialiased;
-	color: #222;
-	text-indent: 0;
-	margin-top: 10px;
-	margin-left: -39px;
-	padding-left: 20px;
-	content: "\f105";
-	transition: 0.3s;
-}
-.readme ul li:hover::before{
-	padding-left: 26px;
-	transition: 0.3s;
-	content: "\f101";
-}
-/*
-color: #159e83;
-\f0da
-\f105
-\f101
-*/
-.readme table {
-	border-top: solid 1px #ddd;
-	border-left: solid 1px #ddd;
-	margin-bottom: 16px;
-	text-indent: 0;
-}
-.readme table th {
-	background-color: #1abc9c;
-	color: #fff;
-	text-align: center;
-}
-.readme table td,.readme table th {
-	border-bottom: solid 1px #ddd;
-	border-right: solid 1px #ddd;
-	padding: 5px 10px;
-}
-.readme table tr {
-	background-color: #fff;
-	transition: 0.3s;
-}
-.readme table tr:hover {
-	background-color: #f9f9f9;
-	transition: 0.3s;
-}
-tbody tr:nth-child(odd) {
-	background-color: #f9f9f9;
-}
-.announcement {
-	color: #777;
-	border-bottom: solid 3px #d0d0d0;
-	background-color: #f8f8f8;
-	padding: 10px 10px;
-	text-align: center;
-	transition: 0.3s;
-}
-.announcement:hover {
-	border-bottom: solid 3px #159e83;
-	transition: 0.3s;
-}
-.toptip p {
-    text-indent: 5px;
-}
-.toptip i,p {
-	display: inline-block;
-    font-size: 15px;
-    margin: 0;
-    line-height: 1;
-    color: #444;
 }
