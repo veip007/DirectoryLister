@@ -131,16 +131,19 @@ if(file_exists($md_file)){
         </div>
       <hr style="margin-bottom: 0;margin-top: 40px;" />
       <?php file_exists('footer.php') ? include('footer.php') : include($lister->getThemePath(true) . "/default_footer.php"); ?>
-<script type="text/javascript"> 
+<script type="text/javascript">
 $(document).ready(function(){
-if (document.body.scrollHeight > window.innerHeight)
-  {
-	container_top.style.marginBottom = '0';
-	container_page.style.marginBottom = '0';
-	container_readme.style.marginBottom = '0';
-	container_readme.style.marginTop = '20px';
-  }
+	if(document.getElementById("container_readme"))
+	{
+		container_readme.style.marginBottom = '0';
+	}
+	if (document.body.scrollHeight > window.innerHeight)
+	{
+		container_top.style.marginBottom = '0';
+		container_page.style.marginBottom = '0';
+		container_readme.style.marginTop = '20px';
+	}
 }); 
-</script> 
+</script>
     </body>
 </html>
