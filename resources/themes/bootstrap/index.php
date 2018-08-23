@@ -141,7 +141,10 @@ $(document).ready(function(){
 	{
 		container_top.style.marginBottom = '0';
 		container_page.style.marginBottom = '0';
-		container_readme.style.marginTop = '20px';
+		if(document.getElementById("container_readme"))
+		{
+			container_readme.style.marginTop = '20px';
+		}
 	}
 }); 
 </script>
