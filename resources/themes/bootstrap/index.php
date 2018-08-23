@@ -132,21 +132,46 @@ if(file_exists($md_file)){
       <hr style="margin-bottom: 0;margin-top: 40px;" />
       <?php file_exists('footer.php') ? include('footer.php') : include($lister->getThemePath(true) . "/default_footer.php"); ?>
 <script type="text/javascript">
-$(document).ready(function(){
+window.onload=function(){  
+	changeDivHeight();  
+}  
+window.onresize=function(){  
+	changeDivHeight();  
+}  
+function changeDivHeight(){
 	if(document.getElementById("container_readme"))
 	{
 		container_readme.style.marginBottom = '0';
 	}
-	if (document.body.scrollHeight > window.innerHeight)
+	
+  	ScrollHeight_body=document.body.scrollHeight-1;
+	InnerHeight_window=window.innerHeight;
+	ClientHeight_top=container_top.clientHeight+60;
+	
+	//console.log(ScrollHeight_body, InnerHeight_window, container_top.clientHeight, ClientHeight_top, InnerHeight_window);
+	
+	if (ScrollHeight_body > InnerHeight_window)
 	{
-		container_top.style.marginBottom = '0';
-		container_page.style.marginBottom = '0';
-		if(document.getElementById("container_readme"))
+		if (ClientHeight_top > InnerHeight_window)
 		{
-			container_readme.style.marginTop = '20px';
+			container_top.style.marginBottom = '0';
+			container_page.style.marginBottom = '0';
+			if(document.getElementById("container_readme"))
+			{
+				container_readme.style.marginTop = '20px';
+			}
+		}
+		else
+		{
+			container_top.style.marginBottom = '';
+			container_page.style.marginBottom = '';
+			if(document.getElementById("container_readme"))
+			{
+				container_readme.style.marginTop = '';
+			}
 		}
 	}
-}); 
+}
 </script>
     </body>
 </html>
