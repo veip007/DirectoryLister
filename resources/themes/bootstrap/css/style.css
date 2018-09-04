@@ -322,6 +322,10 @@ color: #159e83;
 	background-color: #f9f9f9;
 	transition: 0.3s;
 }
+.readme img {
+	max-width:100%;
+	height:auto;
+}
 tbody tr:nth-child(odd) {
 	background-color: #f9f9f9;
 }
