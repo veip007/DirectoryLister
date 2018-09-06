@@ -2,7 +2,7 @@
 <?php 
 header("Content-type: text/html; charset=utf-8"); 
 $md_path_all = $lister->getListedPath();
-$suffix_array = explode('.', $_SERVER['SERVER_NAME']);
+$suffix_array = explode('.', $_SERVER['HTTP_HOST']);
 $suffix = end($suffix_array);
 $md_path = explode($suffix, $md_path_all);
 if($md_path[1] != ""){
