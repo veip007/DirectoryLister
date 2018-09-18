@@ -362,56 +362,6 @@ class DirectoryLister {
 
     }
 
-
-    /**
-     * Returns array of file hash values
-     *
-     * @param  string $filePath Path to file
-     * @return array Array of file hashes
-     * @access public
-     */
-    public function getFileHash($filePath) {
-
-        // Placeholder array
-        $hashArray = array();
-
-        // Verify file path exists and is a directory
-        if (!file_exists($filePath)) {
-            return json_encode($hashArray);
-        }
-
-        // Prevent access to hidden files
-        if ($this->_isHidden($filePath)) {
-            return json_encode($hashArray);
-        }
-
-        // Prevent access to parent folders
-        if (strpos($filePath, '<') !== false || strpos($filePath, '>') !== false
-        || strpos($filePath, '..') !== false || strpos($filePath, '/') === 0) {
-            return json_encode($hashArray);
-        }
-
-        // Prevent hashing if file is too big
-        if (filesize($filePath) > $this->_config['hash_size_limit']) {
-
-            // Notify user that file is too large
-            $hashArray['md5']  = '[ 文件大小超过阈值 ]';
-            $hashArray['sha1'] = '[ 文件大小超过阈值 ]';
-
-        } else {
-
-            // Generate file hashes
-            $hashArray['md5']  = hash_file('md5', $filePath);
-            $hashArray['sha1'] = hash_file('sha1', $filePath);
-
-        }
-
-        // Return the data
-        return $hashArray;
-
-    }
-
-
     /**
      * Set directory path variable
      *
