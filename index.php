@@ -9,18 +9,6 @@
     // Restrict access to current directory
     ini_set('open_basedir', getcwd());
 
-    // Return file hash
-    if (isset($_GET['hash'])) {
-
-        // Get file hash array and JSON encode it
-        $hashes = $lister->getFileHash($_GET['hash']);
-        $data   = json_encode($hashes);
-
-        // Return the data
-        die($data);
-
-    }
-
     if (isset($_GET['zip'])) {
 
         $dirArray = $lister->zipDirectory($_GET['zip']);
