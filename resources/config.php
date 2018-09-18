@@ -15,13 +15,16 @@ return array(
         '*/.ht*',
         'resources',
         'resources/*',
-		'ErrorFiles',
-		'ErrorFiles/*',
+        'ErrorFiles',
+        'ErrorFiles/*',
         'analytics.inc',
-        'header.php',
-        'footer.php',
-		'*/README.*',
-		'README.*'
+        '*.php',
+        '*.html',
+        '.well-known',
+        '.well-known/*',
+        '*/README.html',
+        'README.html',
+        'robots.txt'
     ),
 
     // Files that, if present in a directory, make the directory
@@ -29,13 +32,8 @@ return array(
     'index_files' => array(
         'index.htm',
         'index.html',
-        'index.php',
-		'*/README.*',
-		'README.*'
+        'index.php'
     ),
-
-    // 文件 hash 阈值
-    'hash_size_limit' => 268435456, // 256 MB
 
     // 自定义排序顺序
     'reverse_sort' => array(
