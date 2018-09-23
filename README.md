@@ -20,15 +20,15 @@
 
 ### 演示示例：
 
-逗比云 https://softs.host
+逗比云 https://softs.run
 
 ### 下载安装：
 
 下载后，解压并上传到已经搭建好 PHP环境 的服务器中，然后就可以上传文件和创建文件夹了！
 
-Github打包：https://github.com/ToyoDAdoubi/DirectoryLister/archive/master.zip
+- Github打包：https://github.com/ToyoDAdoubi/DirectoryLister/archive/master.zip
 
-逗比云打包：https://softs.host/Website/Directory%20Lister%E9%AD%94%E6%94%B9%E7%89%88%28by-Toyo%29%20v2.6.1.zip
+- 逗比云打包：[https://softs.run/Website/Directory Lister魔改版(by-Toyo) v2.6.1.zip](https://softs.run/Website/Directory%20Lister%E9%AD%94%E6%94%B9%E7%89%88%28by-Toyo%29%20v2.6.1.zip)
 
 #### 文件结构
 假设你的虚拟主机是 `/home/wwwroot/xxx.xx`
@@ -69,41 +69,48 @@ sed -i 's/,scandir//g' /usr/local/php/etc/php.ini
 /etc/init.d/php-fpm restart
 # 重启 PHP生效
 ```
+#### 程序放在网站子目录不显示 README.html 的解决方法
+
+因为程序有个判断 `README.html` 路径的代码，而如果是正常使用域名或IP(即使加上)，都是可以自适应的。
+
+但是如果把程序放在子目录下，就会无法获取正确 `README.html` 路径，需要你手动修改下程序里的一句代码。
+
+假设你将程序放在了子目录 `zimulu` 中（也就是 `http://xxx.xx/zimulu` 才能访问到程序网页）。
+
+首先打开该文件： `/resources/themes/bootstrap/index.php`  
+
+找到第5行的： `$suffix_array = explode('.', $_SERVER['HTTP_HOST']);`  
+
+将其修改为： `$suffix_array = explode('.', $_SERVER['HTTP_HOST']."/zimulu");`
 
 #### 简介功能说明
 
 我也不知道该给这个功能起什么名字，好捉急偶。
 
-可以在每个文件夹下面放一个` README.html `文件，这个文件里写着 简介说明内容即可，格式参考自带的示例文件。
+可以在每个文件夹下面放一个 `README.html` 文件，这个文件里写着 简介说明内容即可，格式参考自带的示例文件。
 
-为了避免中文乱码，把` README.html `文件用 UTF-8无BOM编码 保存！
+为了避免中文乱码，把 `README.html` 文件用 UTF-8无BOM编码 保存！
 
 #### 文件修改说明
 
-修改网站中头部导航标题，去这个文件里搜索` DOUBI Soft `然后全部替换为自己要改的。
+修改网站中头部导航标题，去这个文件里搜索 `DOUBI Soft` 然后全部替换为自己要改的。  
+`/resources/DirectoryLister.php `
 
-` \resources\DirectoryLister.php `
+修改网站标签栏的标题，去这个文件里把开头 `<title>` 标签中的` DOUBI Soft `替换为自己要改的。  
+`/resources/themes/bootstrap/index.php `
 
-修改网站标签栏的标题，去这个文件里把开头` <title> `标签中的` DOUBI Soft `替换为自己要改的。
+修改网站顶部公告栏内容，去这个文件里搜索 `顶部公告栏`。  
+`/resources/themes/bootstrap/index.php `
 
-` \resources\themes\bootstrap\index.php `
+网站头部公共文件：  
+`/resources/themes/bootstrap/default_header.php `
 
-修改网站顶部公告栏内容，去这个文件里搜索` 顶部公告栏 `。
+网站底部公共文件：  
+`/resources/themes/bootstrap/default_footer.php `
 
-` \resources\themes\bootstrap\index.php `
+如果想要插入流量统计代码，那只需要把代码写到 `default_header.php` 文件内即可。
 
-
-网站头部公共文件：
-
-` \resources\themes\bootstrap\default_header.php `
-
-网站底部公共文件：
-
-` \resources\themes\bootstrap\default_footer.php `
-
-如果想要插入流量统计代码，那只需要把代码写到 default_header.php 文件内即可。
-
-——————
+---
 
 我的博客 逗比根据地(需挂代理)：https://doub.io/dbrj-3/
 
