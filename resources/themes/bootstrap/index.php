@@ -34,22 +34,6 @@ if(file_exists($md_file)){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <?php file_exists('analytics.inc') ? include('analytics.inc') : false; ?>
-		<script type="text/JavaScript">
-// 收藏本站
-		function AddFavorite(title, url) {
-			try {
-				window.external.addFavorite(url, title);
-			}
-			catch (e) {
-				try {
-					window.sidebar.addPanel(title, url, "");
-				}
-				catch (e) {
-					alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请使用Ctrl+D进行添加");
-				}
-			}
-		}
-</script>
     </head>
     <body>
         <div id="page-navbar" class="path-top navbar navbar-default navbar-fixed-top">
@@ -129,7 +113,7 @@ if(file_exists($md_file)){
 		?>
 		<!-- READMNE 说明 -->
         </div>
-      <hr style="margin-bottom: 0;margin-top: 40px;" />
+      <hr id="footer_hr" style="margin-bottom: 0;margin-top: 40px;" />
       <?php file_exists('footer.php') ? include('footer.php') : include($lister->getThemePath(true) . "/default_footer.php"); ?>
 <script type="text/javascript">
 window.onload=function(){  
@@ -144,11 +128,24 @@ function changeDivHeight(){
 		container_readme.style.marginBottom = '0';
 	}
 	
-  	ScrollHeight_body=document.body.scrollHeight-1;
+  	ScrollHeight_body=document.body.offsetHeight;
 	InnerHeight_window=window.innerHeight;
+	container_top.style.minHeight = '0';
 	ClientHeight_top=container_top.clientHeight+60;
+	ClientHeight_top1=ClientHeight_top+69;
+	ClientHeight_top2=ClientHeight_top1-60;
 	
-	//console.log(ScrollHeight_body, InnerHeight_window, container_top.clientHeight, ClientHeight_top, InnerHeight_window);
+	//console.log(ScrollHeight_body, InnerHeight_window, container_top.clientHeight, ClientHeight_top, ClientHeight_top1, ClientHeight_top2, InnerHeight_window);
+	container_top.style.minHeight = '';
+	
+	if (ScrollHeight_body > ClientHeight_top2)
+	{
+		footer_hr.style.marginTop = '0';
+	}
+	else
+	{
+		footer_hr.style.marginTop = '40px';
+	}
 	
 	if (ScrollHeight_body > InnerHeight_window)
 	{
@@ -163,6 +160,29 @@ function changeDivHeight(){
 		}
 		else
 		{
+			footer_hr.style.marginTop = '40px';
+			container_top.style.marginBottom = '';
+			container_page.style.marginBottom = '';
+			if(document.getElementById("container_readme"))
+			{
+				container_readme.style.marginTop = '';
+			}
+		}
+	}
+	else
+	{
+		if (ScrollHeight_body < ClientHeight_top1)
+		{
+			container_top.style.marginBottom = '0';
+			container_page.style.marginBottom = '0';
+			if(document.getElementById("container_readme"))
+			{
+				container_readme.style.marginTop = '20px';
+			}
+		}
+		else
+		{
+			footer_hr.style.marginTop = '40px';
 			container_top.style.marginBottom = '';
 			container_page.style.marginBottom = '';
 			if(document.getElementById("container_readme"))
