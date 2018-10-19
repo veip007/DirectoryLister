@@ -21,7 +21,7 @@
 
 ### 演示示例：
 
-逗比云 https://softs.run
+逗比云 https://softs.wtf (需挂代理)
 
 ### 下载安装：
 
