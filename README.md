@@ -1,5 +1,9 @@
 # 一个逗比魔改的Directory Lister~
 
+
+![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
+
+
 ### 魔改特点：
 
 我之所以使用Directory Lister，就是因为这个程序非常的简洁，符合我心中对 目录列表程序的定义，在使用期间，根据我个人喜好和审美做了一些改变。
