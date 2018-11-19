@@ -21,7 +21,7 @@
  - 2018/07/18，修复 当程序位置网站子目录下时，CSS JS 路径错误的问题。
  - 2018/03/26，修复 当前文件夹下无 README.html 文件时，PHP会提示警告的问题。
  
-![新旧式样手机效果对比](https://github.com/ToyoDAdoubi/DirectoryLister/raw/master/Compared.png)
+![新旧式样手机效果对比](https://github.com/ToyoDAdoubiBackup/DirectoryLister/raw/master/Compared.png)
 
 ### 演示示例：
 
@@ -31,7 +31,7 @@
 
 下载后，解压并上传到已经搭建好 PHP环境 的服务器中，然后就可以上传文件和创建文件夹了！
 
-- Github打包：https://github.com/ToyoDAdoubi/DirectoryLister/archive/master.zip
+- Github打包：https://github.com/ToyoDAdoubiBackup/DirectoryLister/archive/master.zip
 
 - 逗比云打包：[https://softs.run/Website/Directory Lister魔改版(by-Toyo) v2.6.1.zip](https://softs.run/Website/Directory%20Lister%E9%AD%94%E6%94%B9%E7%89%88%28by-Toyo%29%20v2.6.1.zip)
 
